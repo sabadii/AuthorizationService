@@ -1,4 +1,6 @@
-package ru.netology.authorizationservice;
+package ru.netology.authorizationservice.repository;
+
+import ru.netology.authorizationservice.Authorities;
 
 import java.util.Arrays;
 import java.util.List;

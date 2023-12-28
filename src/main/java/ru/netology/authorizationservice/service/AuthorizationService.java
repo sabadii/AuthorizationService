@@ -1,4 +1,9 @@
-package ru.netology.authorizationservice;
+package ru.netology.authorizationservice.service;
+
+import ru.netology.authorizationservice.Authorities;
+import ru.netology.authorizationservice.exception.InvalidCredentials;
+import ru.netology.authorizationservice.exception.UnauthorizedUser;
+import ru.netology.authorizationservice.repository.UserRepository;
 
 import java.util.List;
 
@@ -9,7 +14,7 @@ public class AuthorizationService {
         this.userRepository = userRepository;
     }
 
-    List<Authorities> getAuthorities(String user, String password) {
+    public List<Authorities> getAuthorities(String user, String password) {
         if (isEmpty(user) || isEmpty(password)) {
             throw new InvalidCredentials("User name or password is empty");
         }
